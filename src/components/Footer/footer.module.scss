@@ -1,0 +1,28 @@
+.footer {
+  padding: 40px 80px;
+  height: 120px;
+  display: flex;
+  justify-content: flex-end;
+  ul {
+    display: flex;
+    gap: 24px;
+    svg {
+      transition: transform 0.2s ease-in-out;
+      rect,
+      path {
+        transition: all 0.2s ease-in-out;
+      }
+      &:hover {
+        rect {
+          stroke: #dc5dfc; // Исправлено: изменяем stroke вместо fill для рамки
+        }
+        path {
+          fill: #dc5dfc; // Если нужно изменить цвет иконки
+        }
+      }
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+}

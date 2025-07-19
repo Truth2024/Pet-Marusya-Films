@@ -1,0 +1,61 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  width: 224px;
+  height: 336px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 80px 0 rgba(255, 255, 255, 0.33);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  &:hover {
+    .deleteBtn {
+      opacity: 1;
+    }
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+  }
+  @media (max-width: 944px) {
+    box-shadow: unset;
+  }
+}
+
+.number {
+  background: #fff;
+  position: absolute;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 62px;
+  height: 48px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  color: #6a5dc2;
+  top: -14px;
+  left: -13px;
+}
+
+.deleteBtn {
+  position: absolute;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: -26px;
+  top: -16px;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  @media (max-width: 944px) {
+    opacity: 1;
+  }
+}

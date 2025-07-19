@@ -1,0 +1,136 @@
+.header {
+  height: 89px;
+  padding: 24.5px 0;
+  margin-bottom: 40px;
+  @media (max-width: 944px) {
+    padding: 17px 0;
+    margin-bottom: 0;
+    height: 56px;
+  }
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133%;
+  color: #fff;
+  @media (max-width: 944px) {
+    justify-content: unset;
+  }
+}
+
+.headerImg {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+  @media (max-width: 944px) {
+    padding-top: 0;
+    margin-right: auto;
+  }
+  img {
+    @media (max-width: 944px) {
+      min-height: 10px;
+
+      max-width: 80px;
+    }
+  }
+}
+
+.headerNav {
+  display: flex;
+  gap: 40px;
+  height: 48px;
+  align-items: center;
+  padding-bottom: 7px;
+  @media (max-width: 1332px) {
+    gap: 30px;
+  }
+  @media (max-width: 944px) {
+    gap: 21px;
+    height: 37px;
+    width: 88px;
+  }
+}
+
+.headerLink {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    top: 38px;
+    left: 0;
+    height: 1.5px;
+    background: #dc5dfc;
+    transition: color 0.2s ease-in-out, width 0.3s ease;
+  }
+
+  &:hover {
+    color: #dc5dfc;
+  }
+
+  &.active::after {
+    width: 100%;
+  }
+
+  // Отключаем подчёркивание на мобильных
+  @media (max-width: 944px) {
+    min-height: 24px;
+    width: 24px;
+    gap: 0;
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.headerSpan {
+  transition: all 0.2s ease-in-out;
+  @media (max-width: 1178px) {
+    display: none;
+  }
+
+  &:hover {
+    color: #dc5dfc;
+  }
+}
+
+.icons {
+  display: none;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1178px) {
+  .icons {
+    display: block;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+}
+
+.profile {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  @media (max-width: 944px) {
+    height: 28px;
+  }
+}
+
+.activeProfile {
+  transition: width 0.3s ease;
+  border-bottom: 2px solid #dc5dfc;
+}
+
+.navMain {
+  @media (max-width: 944px) {
+    display: none;
+  }
+}

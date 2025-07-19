@@ -1,0 +1,58 @@
+.hero {
+  margin-bottom: 40px;
+  @media (max-width: 944px) {
+    margin-bottom: 56px;
+  }
+}
+
+.heroFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 944px) {
+    flex-direction: column-reverse;
+    justify-content: unset;
+    align-items: center;
+  }
+}
+
+.heroInfo {
+  margin-bottom: 16px;
+  padding-top: 73px;
+  @media (max-width: 944px) {
+    padding-top: 0;
+  }
+}
+
+.heroInfo ul {
+  gap: 16px;
+}
+
+.heroInfo li {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  color: rgba(255, 255, 255, 0.7);
+  @media (max-width: 944px) {
+    font-size: 14px;
+  }
+}
+
+.heroInfo span {
+  padding: 4px 12px;
+  min-width: 70px;
+  height: 32px;
+  margin-right: 16px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #fff;
+  @media (max-width: 944px) {
+    margin-right: 0px;
+  }
+}
+
+.heroInfo span svg {
+  margin-right: 5px;
+}

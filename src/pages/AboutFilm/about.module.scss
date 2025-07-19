@@ -1,0 +1,128 @@
+.about {
+  margin-bottom: 40px;
+  @media (max-width: 944px) {
+    margin-bottom: 56px;
+  }
+}
+
+.aboutFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    @media (max-width: 944px) {
+      max-width: 251px;
+    }
+  }
+  @media (max-width: 944px) {
+    flex-direction: column-reverse;
+    justify-content: unset;
+    align-items: center;
+  }
+}
+
+.aboutInfo {
+  margin-bottom: 16px;
+  padding-top: 73px;
+  @media (max-width: 944px) {
+    padding-top: 0;
+  }
+}
+.aboutInfo ul {
+  gap: 16px;
+}
+.aboutInfo li {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  color: rgba(255, 255, 255, 0.7);
+  @media (max-width: 944px) {
+    font-size: 14px;
+  }
+}
+
+.aboutInfo span {
+  padding: 4px 12px;
+  min-width: 70px;
+  height: 32px;
+  margin-right: 16px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #fff;
+  @media (max-width: 944px) {
+    margin-right: 0px;
+  }
+}
+
+.aboutInfo span svg {
+  margin-right: 5px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 120%;
+  color: #fff;
+  margin-bottom: 64px;
+}
+
+.listItem {
+  display: flex;
+  align-items: baseline;
+  // max-width: 500px;
+  width: fit-content;
+  @media (max-width: 944px) {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+.label {
+  font-size: 18px;
+  line-height: 133%;
+  color: #fff;
+  @media (max-width: 944px) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.labelItems {
+  font-size: 18px;
+  line-height: 133%;
+  color: #fff;
+  @media (max-width: 944px) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    color: #fff;
+  }
+}
+
+.dash {
+  min-width: 193px;
+  flex: 1;
+  margin: 0px 7px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+  @media (max-width: 944px) {
+    display: none;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @media (max-width: 944px) {
+    gap: 12px;
+  }
+}
+
+.aboutBottom {
+  margin-bottom: 120px;
+}

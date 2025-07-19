@@ -1,0 +1,84 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.blueBtn {
+  background: #67a5eb;
+  margin-bottom: 24px;
+  height: 56px;
+  width: 340px;
+  border-radius: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 944px) {
+    width: 295px;
+  }
+}
+
+.transparentBtn {
+  cursor: pointer;
+  color: #000;
+  display: flex;
+  width: fit-content;
+}
+.button {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+}
+
+.regTitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  color: #000;
+  text-wrap: nowrap;
+}
+
+.regP {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  text-align: center;
+  color: #000;
+}
+
+.regButton {
+  background: #67a5eb;
+  width: 340px;
+  height: 56px;
+  border-radius: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #fff;
+}
+
+.success {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 21px;
+}
+
+.form {
+  @media (max-width: 944px) {
+    max-width: 295px;
+    height: 100%;
+  }
+}
+
+.titleReg {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  color: #000;
+  margin-bottom: 24px;
+}

@@ -1,0 +1,65 @@
+.titleBlock {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 64px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+
+  svg {
+    transition: transform 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6), fill 0.3s ease-in-out; // Анимируем transform и цвет
+  }
+
+  h2 {
+    transition: color 0.3s ease-in-out;
+    padding-bottom: 4px;
+  }
+
+  &:hover {
+    color: #dc5dfc;
+
+    svg,
+    h2 {
+      color: inherit;
+    }
+
+    svg {
+      transform: translateX(-5px);
+    }
+  }
+}
+
+.center {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  button {
+    background: #67a5eb;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 218px;
+    height: 56px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 133%;
+    color: #fff;
+  }
+}
+
+.filmsByGenre {
+  margin-bottom: 160px;
+}
+
+.mb {
+  margin-bottom: 64px;
+}

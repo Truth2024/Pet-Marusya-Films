@@ -1,0 +1,40 @@
+.infoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.infoRating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  padding: 4px 12px;
+  min-width: 70px;
+  height: 32px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #fff;
+  font-family: var(--font-family);
+
+  svg {
+    margin-right: 5px;
+  }
+}
+
+.infoList {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoItem {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  color: rgba(255, 255, 255, 0.7);
+}

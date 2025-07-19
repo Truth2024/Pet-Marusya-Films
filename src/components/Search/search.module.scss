@@ -1,0 +1,130 @@
+.search {
+  position: relative;
+  border-radius: 8px;
+  width: 655px;
+  height: 48px;
+  background-color: #393b3c;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1332px) {
+    width: 500px;
+  }
+  @media (max-width: 944px) {
+    width: auto;
+    padding: 0px;
+    justify-content: flex-end;
+    background-color: transparent;
+  }
+}
+
+.searchIcon {
+  margin-right: 12px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+
+  @media (max-width: 944px) {
+    margin-right: 0;
+    path {
+      fill-opacity: 1;
+    }
+  }
+}
+
+.searchInput {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  color: rgba(255, 255, 255, 0.5);
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+
+  @media (max-width: 944px) {
+    display: none; // скрыт по умолчанию
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    padding: 12px 18px;
+    background: #393b3c;
+    z-index: 100;
+    border-radius: 0;
+    width: 100vw;
+    font-size: 16px;
+
+    &.mobileInputVisible {
+      display: block;
+    }
+  }
+}
+
+.searchBlock {
+  z-index: 40;
+  position: absolute;
+  border-radius: 8px;
+  width: 559px;
+  max-height: 0;
+  overflow: hidden;
+  background: #393b3c;
+  right: 0;
+  top: 58px;
+  padding: 0 8px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, max-height 0.4s ease-in-out,
+    padding 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  @media (max-width: 944px) {
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    width: calc(100vw - 24px);
+    background: #393b3c;
+    border-radius: 8px;
+    z-index: 99;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 0 8px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, max-height 0.4s ease-in-out,
+      padding 0.3s ease-in-out;
+  }
+
+  &:not(.hidden) {
+    max-height: 476px;
+    opacity: 1;
+    transform: translateX(0) translateY(12px);
+    padding: 8px;
+    overflow-y: auto;
+    @media (max-width: 944px) {
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+}
+
+.searchList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @media (max-width: 944px) {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+}
+
+.notFound {
+  font-size: 18px;
+  padding: 15px;
+  color: rgba(255, 255, 255, 0.7);
+}

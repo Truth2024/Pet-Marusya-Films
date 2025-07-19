@@ -1,0 +1,38 @@
+.filmsSection {
+  margin-bottom: 120px;
+  h3 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    color: #fff;
+    margin-bottom: 64px;
+    @media (max-width: 944px) {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+}
+
+.customList {
+  display: flex;
+  column-gap: 40px;
+  row-gap: 64px;
+  flex-wrap: wrap;
+  justify-content: center;
+  @media (max-width: 944px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    // overflow-x: scroll;
+    overflow-x: auto; // Измените scroll на auto
+    overflow-y: hidden; // Отключаем вертикальную прокрутку
+    scrollbar-width: none; // Для Firefox
+    -ms-overflow-style: none; // Для IE
+    column-gap: 40px; // Оставьте отступ между карточками
+    padding-bottom: 20px; // Добавьте отступ снизу для scrollbar
+    padding-left: 20px;
+    padding-right: 20px; // Компенсируем padding
+    padding-top: 22px;
+    justify-content: unset;
+  }
+}

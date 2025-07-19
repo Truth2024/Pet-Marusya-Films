@@ -1,0 +1,77 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 16, 25, 0.2);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+
+.overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.window {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 24px;
+  padding: 64px 40px;
+  max-width: 420px;
+  width: 100%;
+  min-height: 381px;
+  background: #fff;
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  @media (max-width: 944px) {
+    padding: 64px 20px 32px 20px;
+    width: 335px;
+    min-height: 409px;
+  }
+}
+.overlay.hidden .window {
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+.icon {
+  margin-bottom: 40px;
+  @media (max-width: 944px) {
+    margin-bottom: 32px;
+  }
+  img {
+    @media (max-width: 944px) {
+      height: 29.5px;
+      width: 132px;
+    }
+  }
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  right: -72px;
+  background: #fff;
+  @media (max-width: 944px) {
+    right: 7px;
+    top: 8px;
+  }
+}
+
+.error {
+  color: tomato;
+}

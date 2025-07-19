@@ -1,0 +1,39 @@
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  width: 290px;
+  height: 304px;
+  box-shadow: 0 0 80px 0 rgba(255, 255, 255, 0.33);
+  background: #969c9c;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.img {
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+  height: 100%;
+  max-height: 218px;
+  width: 100%;
+}
+
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a0b0b;
+  border-end-end-radius: inherit;
+  border-end-start-radius: inherit;
+  height: calc(100% - 220px);
+  span {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 133%;
+    text-align: center;
+    color: #fff;
+  }
+}

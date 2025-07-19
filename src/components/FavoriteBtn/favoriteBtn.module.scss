@@ -1,0 +1,57 @@
+.btnExtra {
+  background-color: #333;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 28px;
+  width: 68px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnHover {
+  transition: color 0.4s, background-color 0.4s, transform 0.1s ease-in-out;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.945);
+
+    svg {
+      path {
+        fill: transparent;
+        stroke: #333;
+      }
+    }
+  }
+
+  &:active {
+    background-color: rgba(230, 230, 230, 0.95);
+    color: #222;
+    transform: scale(0.97);
+  }
+}
+
+// 👉 Добавьте это:
+// .added {
+//   svg {
+//     path {
+//       color: red;
+//     }
+//   }
+// }
+.heart {
+  path {
+    transition: all 0.3s ease-in-out;
+    fill: transparent;
+    stroke: rgba(255, 255, 255, 0.945);
+  }
+}
+
+.added {
+  svg {
+    path {
+      fill: #dc5dfc;
+      stroke: #dc5dfc;
+      stroke-width: 0;
+    }
+  }
+}

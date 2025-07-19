@@ -1,0 +1,51 @@
+.inputGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 16px 16px 16px 52px;
+  width: 340px;
+  height: 56px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  color: rgba(0, 0, 0, 0.4);
+  @media (max-width: 944px) {
+    width: 295px;
+    height: 56px;
+  }
+}
+
+.inputDiv {
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 1px;
+    left: -37px;
+  }
+}
+
+.error {
+  display: none;
+  height: 10px;
+  white-space: nowrap;
+}
+
+.visible {
+  display: block;
+  padding-left: 15px;
+  color: tomato;
+}
+
+.border {
+  border-color: tomato;
+
+  svg {
+    path {
+      fill: tomato;
+      fill-opacity: 1;
+    }
+  }
+}

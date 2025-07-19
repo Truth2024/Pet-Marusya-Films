@@ -1,0 +1,191 @@
+.title {
+  margin-bottom: 72px;
+  @media (max-width: 944px) {
+    margin-bottom: 40px;
+  }
+}
+
+.profile {
+  @media (max-width: 944px) {
+    padding-top: 16px;
+  }
+}
+
+.display {
+  display: flex;
+  gap: 64px;
+  margin-bottom: 64px;
+  @media (max-width: 944px) {
+    gap: 24px;
+    justify-content: center;
+  }
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133%;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  svg {
+    path {
+      transition: all 0.4s ease-in-out;
+    }
+  }
+  &:hover {
+    color: #dc5dfc;
+    svg {
+      path {
+        fill: #dc5dfc;
+      }
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    top: 38px;
+    left: 0;
+    height: 1.5px;
+    background: #dc5dfc;
+    transition: width 0.3s ease;
+    @media (max-width: 944px) {
+      display: none; // Полностью скрываем псевдоэлемент
+    }
+  }
+
+  // Класс для показа подчеркивания
+  &.active::after {
+    width: 100%;
+  }
+}
+
+.content {
+  height: fit-content;
+}
+
+///
+
+.accountIfno {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  color: #fff;
+  @media (max-width: 944px) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item:last-child {
+  margin-bottom: 40px;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  color: #fff;
+  @media (max-width: 944px) {
+    font-size: 14px;
+  }
+}
+
+.info {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  color: #fff;
+  @media (max-width: 944px) {
+    font-size: 18px;
+  }
+}
+
+.logout {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #67a5eb;
+  border-radius: 28px;
+  width: 262px;
+  height: 56px;
+  @media (max-width: 944px) {
+    width: 335px;
+  }
+}
+
+.noFind {
+  text-align: center;
+}
+
+.desctop {
+  @media (max-width: 944px) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+  @media (max-width: 944px) {
+    display: flex;
+  }
+}
+
+.customList {
+  display: flex;
+  column-gap: 40px;
+  row-gap: 64px;
+  flex-wrap: wrap;
+  justify-content: center;
+  @media (max-width: 944px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    // overflow-x: scroll;
+    overflow-x: auto; // Измените scroll на auto
+    overflow-y: hidden; // Отключаем вертикальную прокрутку
+    scrollbar-width: none; // Для Firefox
+    -ms-overflow-style: none; // Для IE
+    column-gap: 40px; // Оставьте отступ между карточками
+    padding-bottom: 20px; // Добавьте отступ снизу для scrollbar
+    padding-left: 20px;
+    padding-right: 20px; // Компенсируем padding
+    padding-top: 22px;
+    justify-content: unset;
+  }
+}

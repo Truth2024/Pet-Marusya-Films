@@ -1,0 +1,173 @@
+.heroTitle {
+  max-width: 584px;
+  margin-bottom: 16px;
+  @media (max-width: 944px) {
+    margin-bottom: 12px;
+  }
+}
+.heroSubtitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133%;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 584px;
+  margin-bottom: 60px;
+  @media (max-width: 944px) {
+    margin-bottom: 32px;
+  }
+}
+.heroButtons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  @media (max-width: 944px) {
+    flex-wrap: wrap;
+  }
+}
+
+.btn {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #fff;
+}
+
+.btnTrailer {
+  background-color: #67a5eb;
+  width: 171px;
+  @media (max-width: 944px) {
+    width: 335px;
+  }
+}
+
+.btnAbout {
+  background-color: #393b3c;
+  width: 183px;
+  @media (max-width: 944px) {
+    width: 167px;
+  }
+}
+
+.btnExtra {
+  background-color: #333;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 28px;
+  width: 68px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnHover {
+  transition: color 0.4s, background-color 0.4s, transform 0.1s ease-in-out;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.945);
+    color: #333;
+  }
+  &:active {
+    background-color: rgba(230, 230, 230, 0.95); // чуть темнее, плотнее
+    color: #222; // чуть темнее текста
+    transform: scale(0.97); // имитирует "нажатие"
+  }
+}
+
+.heroRight {
+  height: 552px;
+  width: 680px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  @media (max-width: 944px) {
+    // max-width: 338px;
+    max-width: 100%;
+    height: 234px;
+    margin-bottom: 24px;
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 920px; // важно, чтобы картинка была выше контейнера
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -62.6166%);
+
+    animation: 30s ease-in-out infinite alternate float;
+
+    @media (max-width: 944px) {
+      // Для мобильной версии делаем анимацию более заметной
+      animation: 20s ease-in-out infinite alternate mobileFloat;
+    }
+  }
+}
+@keyframes mobileFloat {
+  0% {
+    transform: translate(-50%, -10%); // Старт: очень высоко (почти верх картинки)
+  }
+  50% {
+    transform: translate(-50%, -85%); // Опускаем вниз
+  }
+  100% {
+    transform: translate(-50%, -10%); // Возвращаем вверх
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -45%);
+  }
+  50% {
+    transform: translate(-50%, -70%);
+  }
+  100% {
+    transform: translate(-50%, -45%);
+  }
+}
+
+.skeletonImg {
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  animation: pulse 1.5s infinite;
+  border-radius: 12px;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #ddd;
+  }
+  50% {
+    background-color: #bbb;
+  }
+  100% {
+    background-color: #ddd;
+  }
+}
+
+.fallback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  font-size: 23px;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  border: 2px dashed rgba(255, 255, 255, 0.7);
+}
+
+.noImg {
+  height: 270px;
+  width: 270px;
+}

@@ -1,0 +1,39 @@
+@use 'variables' as *;
+body {
+  box-sizing: border-box;
+  background-color: #0e1c2f;
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: #fff;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px;
+  @media (max-width: 944px) {
+    padding: 0 20px;
+  }
+}
+
+.title48 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 117%;
+  color: #fff;
+  @media (max-width: 944px) {
+    font-size: 24px;
+  }
+}
+
+.list {
+  display: flex;
+  column-gap: 40px;
+  row-gap: 64px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: 944px) {
+    row-gap: 40px;
+  }
+}

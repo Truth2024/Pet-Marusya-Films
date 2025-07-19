@@ -1,0 +1,22 @@
+.heroWrapper {
+  width: 1280px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.rect {
+  fill: #e0e0e0;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    fill: #ddd;
+  }
+  50% {
+    fill: #bbb;
+  }
+  100% {
+    fill: #ddd;
+  }
+}

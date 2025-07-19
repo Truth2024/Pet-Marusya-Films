@@ -1,0 +1,40 @@
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 224px;
+  height: 336px;
+  cursor: pointer;
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0 0 80px 0 rgba(255, 255, 255, 0.33);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.cardRect {
+  fill: #e2e2e2;
+  stroke: rgba(255, 255, 255, 0.25);
+  stroke-width: 1;
+}
+
+.skeletonShimmer {
+  fill: #e2e2e2;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    fill: #e2e2e2;
+  }
+  50% {
+    fill: #d0d0d0;
+  }
+  100% {
+    fill: #e2e2e2;
+  }
+}
