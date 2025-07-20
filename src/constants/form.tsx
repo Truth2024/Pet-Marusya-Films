@@ -10,6 +10,7 @@ export const authForm = [
       </svg>
     ),
     placeholder: 'Электронная почта',
+    type: 'text',
     name: 'email',
   },
   {
@@ -22,10 +23,11 @@ export const authForm = [
         />
       </svg>
     ),
+    type: 'password',
     placeholder: 'Пароль',
     name: 'password',
   },
-];
+] as const;
 
 export const regForm = [
   {
@@ -38,6 +40,7 @@ export const regForm = [
         />
       </svg>
     ),
+    type: 'text',
     placeholder: 'Электронная почта',
     name: 'email',
   },
@@ -51,6 +54,7 @@ export const regForm = [
         />
       </svg>
     ),
+    type: 'text',
     placeholder: 'Имя',
     name: 'name',
   },
@@ -64,6 +68,7 @@ export const regForm = [
         />
       </svg>
     ),
+    type: 'text',
     placeholder: 'Фамилия',
     name: 'surname',
   },
@@ -77,6 +82,7 @@ export const regForm = [
         />
       </svg>
     ),
+    type: 'password',
     placeholder: 'Пароль',
     name: 'password',
   },
@@ -90,7 +96,8 @@ export const regForm = [
         />
       </svg>
     ),
+    type: 'password',
     placeholder: 'Подтвердите пароль',
     name: 'acceptPassword',
   },
-];
+] as const;

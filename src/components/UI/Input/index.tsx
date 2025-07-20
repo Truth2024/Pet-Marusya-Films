@@ -16,7 +16,6 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(({ error, classNam
           {icon && <span className={`${styles.iconWrapper} ${error ? styles.border : ''}`}>{icon}</span>}
         </div>
       </div>
-      <p className={`${styles.error} ${error ? styles.visible : ''}`}>{error}</p>
     </>
   );
 });

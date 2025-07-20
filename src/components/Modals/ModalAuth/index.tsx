@@ -6,7 +6,7 @@ import { selectAutharization } from '../../../features/thunk/selectors';
 import { closeModal } from '../../../features/thunk/Authorization';
 export const Modal = () => {
   const dispatch = useAppDispatch();
-  const { isModalOpen, error } = useAppSelector(selectAutharization);
+  const { isModalOpen } = useAppSelector(selectAutharization);
   return (
     <div onClick={() => dispatch(closeModal())} className={`${styles.overlay} ${!isModalOpen ? styles.hidden : ''}`}>
       <div onClick={(e) => e.stopPropagation()} className={styles.window}>
@@ -23,7 +23,6 @@ export const Modal = () => {
         </div>
 
         <Form />
-        {error && <p className={styles.error}>Неверный пароль или логин</p>}
       </div>
     </div>
   );
