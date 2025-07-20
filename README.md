@@ -22,6 +22,8 @@
 - React
 - TypeScript
 - Vite
+- Zod
+- React-hook-form
 - Redux Toolkit
 - Redux thunk
 - Fetch (HTTP-запросы)
