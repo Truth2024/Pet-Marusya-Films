@@ -6,7 +6,7 @@
     <tr>
       <td>
         <img src="https://github.com/Truth2024/Pet-Marusya-Films/blob/main/src/assets/marusya.png" 
-             alt="Pet Social Club" 
+             alt="Pet Marusya" 
              style="width: 100%; max-width: 100%; height: auto"/>
       </td>
     </tr>
